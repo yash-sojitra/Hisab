@@ -15,11 +15,11 @@ export default function AddExpenseButton() {
     return (
         <Dialog>
             <DialogTrigger>
-                <Button><Plus />Add Expense</Button>
+                <Button><Plus />Add Transaction</Button>
             </DialogTrigger>
             <DialogContent>
                 <DialogHeader>
-                    <DialogTitle>Add Expense</DialogTitle>
+                    <DialogTitle>Add Transaction</DialogTitle>
                     <DialogDescription>
                         <AddExpenseForm />
                     </DialogDescription>

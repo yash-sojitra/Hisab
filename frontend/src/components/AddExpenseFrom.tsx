@@ -223,7 +223,7 @@ export function AddExpenseForm() {
                     className="hidden"
                   />
                   <Button variant={'outline'} type="button" onClick={() => fileInputRef.current?.click()} disabled={uploading}>
-                    {uploading ? "Processing..." : "Upload Photo"}
+                    {uploading ? "Processing..." : "Upload Receipt"}
                   </Button>
                 </>
               </FormControl>
