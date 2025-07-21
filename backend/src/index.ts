@@ -14,9 +14,9 @@ import categoryRouter from './routes/categoryRoutes';
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-app.use((req, res, next) => {
+app.use((req: Request, res: Response, next: NextFunction) => {
     console.log(req.path + " " + req.method);
-    next();
+    next()
 })
 
 connectDB();
@@ -33,14 +33,7 @@ app.use("/api/categories", clerkAuthMiddleware, categoryRouter);
 
 
 app.get("/api/testauth", clerkAuthMiddleware, (req: Request, res: Response) => {
-    console.log('reached inside api endpoint');
     res.json({message: "hello authenticated user"});
-    console.log('message sent');
-})
-
-app.use((req: Request, res: Response, next: NextFunction) => {
-    console.log(req.path + " " + req.method);
-    next()
 })
 
 app.get('/', (req: Request, res: Response) => {

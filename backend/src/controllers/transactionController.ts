@@ -35,8 +35,6 @@ export const transactionController = {
 
         const cleanedBase64 = image.replace(/^data:image\/\w+;base64,/, "");
 
-        console.log("image and userId are available");
-
         const categories = await Category.getAllCategories(userId);
         const categoryNames = categories.map(category => category.name);
 

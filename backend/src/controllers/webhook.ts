@@ -46,7 +46,6 @@ export const clerkWebhook = async (req: Request, res: Response) => {
     const email = (evt.data as UserJSON).email_addresses[0].email_address;
 
     const eventType = evt.type;
-    console.log(`Webhook with an ID of ${id} and type of ${eventType}`);
 
     if (eventType === 'user.created') {
         const user = await User.create({ _id: id, email, first_name ,last_name });
