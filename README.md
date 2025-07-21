@@ -90,7 +90,7 @@ Create `.env` files:
 ### 4. setup Ngork tunnel
 
 * create Ngork Account
-* accuire free static domain from dashboard
+* acquire free static domain from dashboard
 * use it to forward backend port to the internet
 ```bash
   ngrok http --url=harmless-<ngork-free-static-domain-app> 3000
