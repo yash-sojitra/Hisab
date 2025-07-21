@@ -87,7 +87,22 @@ Create `.env` files:
   VITE_CLERK_PUBLISHABLE_KEY==<your-clerk-publishable-key>
   ```
 
-### 4. Run Locally
+### 4. setup Ngork tunnel
+
+* create Ngork Account
+* acquire free static domain from dashboard
+* use it to forward backend port to the internet
+```bash
+  ngrok http --url=harmless-<ngork-free-static-domain-app> 3000
+```
+
+### 5. setup clerk webhook 
+
+* go to clerk dashboard -> Configure
+* go to webhooks -> create Endpoint
+* enter ngork free domain you just accuired
+
+### 6. Run Locally
 
 ```bash
 cd backend
