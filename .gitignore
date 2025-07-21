@@ -45,3 +45,8 @@ public/
 SROIE2019
 
 index.js
+
+#build directries
+dist
+backend/dist
+frontend/dist

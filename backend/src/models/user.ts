@@ -1,5 +1,6 @@
 import mongoose from "mongoose";
 
+//user schema
 const userSchema = new mongoose.Schema({
     _id: { // clerk id
         type: String,
@@ -20,7 +21,7 @@ const userSchema = new mongoose.Schema({
     },
     budget:{
         type: Number,
-    }
+    },
 },{ timestamps: true });
 
 export const User = mongoose.model("User", userSchema);
